@@ -1,0 +1,16 @@
+MENU TITLE Distros
+
+LABEL MainMenu
+  MENU LABEL ^Return to Main Menu
+  KERNEL syslinux/menu.c32
+  APPEND pxelinux.cfg/default
+
+LABEL trusty
+  MENU LABEL trusty
+  KERNEL /distros/ubuntu/14.04/install/vmlinuz
+  APPEND initrd=/distros/ubuntu/14.04/install/netboot/ubuntu-installer/amd64/initrd.gz
+
+LABEL xenial
+  MENU LABEL xenial
+  KERNEL /distros/ubuntu/16.04/install/vmlinuz
+  APPEND initrd=/distros/ubuntu/16.04/install/netboot/ubuntu-installer/amd64/initrd.gz

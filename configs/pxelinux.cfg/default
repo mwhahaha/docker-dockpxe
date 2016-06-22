@@ -1,0 +1,17 @@
+DEFAULT syslinux/menu.c32
+PROMPT 30
+MENU TITLE mwhahaha/dockpxe
+MENU AUTOBOOT Starting Local System in # seconds
+
+LABEL local 
+  MENU LABEL (local)
+  MENU DEFAULT
+  LOCALBOOT -1
+
+TIMEOUT 100
+TOTALTIMEOUT 8000
+
+LABEL DistrosMenu
+  MENU LABEL ^Distros Menu
+  KERNEL syslinux/menu.c32
+  APPEND pxelinux.cfg/distros.menu
